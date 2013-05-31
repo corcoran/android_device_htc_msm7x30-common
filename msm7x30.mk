@@ -83,8 +83,8 @@ PRODUCT_PACKAGES += \
     libnetcmdiface
 
 # Power HAL
-PRODUCT_PACKAGES += \
-    power.msm7x30
+#PRODUCT_PACKAGES += \
+#    power.msm7x30
 
 # Media
 PRODUCT_PACKAGES += \
