@@ -58,7 +58,7 @@ public class DeviceSettings extends FragmentActivity {
         bar.setDisplayHomeAsUpEnabled(true);
 
         mTabsAdapter = new TabsAdapter(this, mViewPager);
-        mTabsAdapter.addTab(bar.newTab().setText(R.string.category_trackpad_title),
+        mTabsAdapter.addTab(bar.newTab().setText(R.string.category_buttons_title),
                     TrackpadFragmentActivity.class, null);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.category_keyboard_title),
                     KeyboardFragmentActivity.class, null);

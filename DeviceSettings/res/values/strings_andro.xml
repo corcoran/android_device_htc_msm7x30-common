@@ -29,6 +29,8 @@
     <string name="pref_trackball_wake_toggle_summary">Allow trackball to wake the device</string>
     <string name="pref_trackball_unlock_toggle_title">Trackball unlock</string>
     <string name="pref_trackball_unlock_toggle_summary">Allow trackball to unlock the device</string>
+    <string name="pref_quick_torch_title">Enable Quick Torch</string>
+    <string name="pref_quick_torch_summary">Hold power while screen is off to activate led flashlight</string>
     <string name="force_keyboard_light_title">Force keyboard backlight</string>
     <string name="force_keyboard_light_summary">Hardware keyboard led will remain on when visible</string>
 

@@ -15,7 +15,7 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory
-            android:title="@string/trackpad_title">
+            android:title="@string/category_trackpad_title" />
 
     <CheckBoxPreference android:key="pref_trackball_unlock_toggle"
         android:title="@string/pref_trackball_unlock_toggle_title"
@@ -26,6 +26,13 @@
         android:title="@string/pref_trackball_wake_toggle_title"
         android:summary="@string/pref_trackball_wake_toggle_summary" />
 
-    </PreferenceCategory>
+    <PreferenceCategory
+            android:title="@string/category_power_title" />
+
+    <CheckBoxPreference android:key="pref_quick_torch"
+        android:title="@string/pref_quick_torch_title"
+        android:summary="@string/pref_quick_torch_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
 

@@ -39,10 +39,12 @@ public class TrackpadFragmentActivity extends PreferenceFragment {
     private static final String TAG = "DeviceSettings_Trackpad";
     private static final String TRACKBALL_WAKE_TOGGLE = "pref_trackball_wake_toggle";
     private static final String TRACKBALL_UNLOCK_TOGGLE = "pref_trackball_unlock_toggle";
+    private static final String ENABLE_QUICK_TORCH = "pref_quick_torch";
 
     private static boolean sTrackball;
     private CheckBoxPreference mTrackballWake;
     private CheckBoxPreference mTrackballUnlockScreen;
+    private CheckBoxPreference mEnableQuickTorch;
     private PreferenceScreen mPrefSet;
     private ContentResolver mCr;
 
@@ -66,6 +68,10 @@ public class TrackpadFragmentActivity extends PreferenceFragment {
                 Settings.System.TRACKBALL_UNLOCK_SCREEN, 0) == 1);
         }
 
+        mEnableQuickTorch = (CheckBoxPreference) findPreference(ENABLE_QUICK_TORCH);
+        mEnableQuickTorch.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.ENABLE_QUICK_TORCH, 0) == 1);
+
     }
 
     @Override
@@ -78,12 +84,12 @@ public class TrackpadFragmentActivity extends PreferenceFragment {
         }
         else if (preference == mTrackballUnlockScreen) {
             Settings.System.putInt(mCr, Settings.System.TRACKBALL_UNLOCK_SCREEN, mTrackballUnlockScreen.isChecked() ? 1 : 0);
+        } else if (preference == mEnableQuickTorch) {
+            Settings.System.putInt(mCr, Settings.System.ENABLE_QUICK_TORCH, mEnableQuickTorch.isChecked() ? 1 : 0);
+        } else {
+            return false;
         }
-        else {
-     return false;
-          }
-        Log.w(TAG, "key: " + key);
-    return true;
+        return true;
     }
 
     public static void restore(Context context) {

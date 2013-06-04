@@ -21,7 +21,9 @@
     <string name="defaults_button">Reset to default</string>
 
     <!-- Haptic Preference -->
+    <string name="category_buttons_title">Buttons</string>
     <string name="category_trackpad_title">Trackpad</string>
+    <string name="category_power_title">Power</string>
     <string name="category_keyboard_title">Keyboard</string>
 
     <!-- Touchscreen Preference -->
@@ -30,7 +32,5 @@
     <string name="wake_title">Sleep2Wake</string>
     <string name="wake_method_title_head">Sleep2Wake Method</string>
     <string name="wake_method_summary_head">Select which sleep2wake mode you prefer to use.</string>
-
-    <string name="trackpad_title">Trackpad</string>
 
 </resources>
